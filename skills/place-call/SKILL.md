@@ -19,6 +19,7 @@ Tools live on the `callforge` MCP server. All calls are real telephone calls to 
 - `place_cloud_call` — force the cloud path (Plivo for +91, Telnyx for international) when hardware should not be used.
 - `check_device_ready` — verify the paired Raspberry Pi + SIM phone bridge is online before relying on the hardware path.
 - `list_cloud_phone_numbers` — show which cloud DIDs the org can call from.
+- **Picking the voice/agent:** call `list_agents` first and pass the chosen agent's UUID as `persona_id` on `place_phone_call`/`place_cloud_call`. Do not rely on the globally active agent — it may not match what the user asked for.
 
 A successful place call returns a call/dispatch ID — keep it for follow-up. If the tool reports a wallet/billing or license error, relay it verbatim; do not retry blindly or claim the call went through.
 
