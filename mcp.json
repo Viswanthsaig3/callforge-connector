@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "callforge": {
+      "type": "streamable-http",
+      "url": "https://call-agent-cloud.vercel.app/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${CALLFORGE_API_KEY}"
+      }
+    }
+  }
+}

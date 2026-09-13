@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "callforge",
+  "version": "0.1.0",
+  "description": "Place AI phone calls, run outbound calling campaigns, and manage voice agents through CallForge. Routes over paired SIM hardware or cloud carriers (Plivo/Telnyx) with Gemini Live speech.",
+  "author": {
+    "name": "CallForge"
+  },
+  "homepage": "https://call-agent-cloud.vercel.app/integrations",
+  "repository": "https://github.com/Viswanthsaig3/callforge-connector",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "telephony",
+    "voice-calls",
+    "ai-calling",
+    "phone",
+    "campaigns",
+    "sales",
+    "grok-bot"
+  ],
+  "logo": "assets/logo.svg",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "CALLFORGE_API_KEY": {
+        "type": "string",
+        "title": "CallForge API key",
+        "description": "Org API key (cfk_…) from CallForge Dashboard → Integrations → API keys. Scopes every tool call to your organization."
+      }
+    },
+    "required": ["CALLFORGE_API_KEY"]
+  }
+}
